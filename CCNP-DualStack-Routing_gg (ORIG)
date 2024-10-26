@@ -2024,6 +2024,7 @@ no route-map ISP1for2233
 router bgp 1
   no neighbor 208.8.8.4 route-map ISP1for2233 in
 end
+clear ip bgp * soft
 !
 
 
@@ -2376,7 +2377,7 @@ routed: in this case, ISP1 and ISP3 will tell R1 to use ISP2 a lot!!!
 			do clear ip bgp * soft
 			end
 
-R1:
+R1: show ip bgp
 
      Network          Next Hop            Metric LocPrf Weight Path
  *   0.0.0.0          208.8.8.4                0             0 45 45 45 45 45 45 i
